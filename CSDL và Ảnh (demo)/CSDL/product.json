@@ -15,9 +15,14 @@
     "image_url": "images/airmax.jpg"
   },
   {
-    "name": "Giày thể thao",
+    "name": "Giày thể thao nam",
     "price": 119.99,
     "image_url": "images/pumarsx.jpg"
+  },
+  {
+    "name": "Giày thể thao nữ",
+    "price": 139.99,
+    "image_url": "images/nikeairforce.jpg"
   },
   {
     "name": "Áo thể thao",
