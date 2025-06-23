@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Ao thun",
+    "price": 99.99,
+    "image_url": "images/superstar.jpg"
+  },
+  {
+    "name": "Quần ngắn",
+    "price": 129.99,
+    "image_url": "images/ultraboost.jpg"
+  },
+  {
+    "name": "Áo khoác",
+    "price": 109.99,
+    "image_url": "images/airmax.jpg"
+  },
+  {
+    "name": "Giày thể thao",
+    "price": 119.99,
+    "image_url": "images/pumarsx.jpg"
+  },
+  {
+    "name": "Áo thể thao",
+    "price": 89.99,
+    "image_url": "images/reebokclassic.jpg"
+  }
+
+]   
