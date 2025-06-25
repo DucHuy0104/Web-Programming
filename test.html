@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .product-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.product-slider::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 4px;
+}
+
+.product-card {
+  min-width: 200px;
+  flex-shrink: 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.product-card img {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+  </style>
+</head>
+<body>
+  <div class="product-slider">
+  <div class="product-card">
+    <img src="img1.jpg" alt="Áo đấu 1" />
+    <p>Áo Đấu Real Madrid</p>
+  </div>
+  <div class="product-card">
+    <img src="img2.jpg" alt="Áo đấu 2" />
+    <p>Áo Messi Hồng</p>
+  </div>
+  <div class="product-card">
+    <img src="img3.jpg" alt="Áo đấu 3" />
+    <p>Áo Messi Đen</p>
+  </div>
+  <div class="product-card">
+    <img src="img4.jpg" alt="Áo đấu 4" />
+    <p>Áo MU Trẻ Em</p>
+  </div>
+  <!-- Thêm nhiều sản phẩm nữa nếu cần -->
+</div>
+
+</body>
+</html>

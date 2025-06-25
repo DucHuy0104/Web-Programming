@@ -1,0 +1,197 @@
+body{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+.head-notify{
+    width: 100%;
+    block-size: 50px;
+    display:flex;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-notify > p{
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+#header-nav{
+    width: 94%;
+    height: 105px;
+    padding: 0 3% 0 3%;
+    margin-top: -16px;
+    border-bottom: 1px solid;
+    border-color: lightgray;
+    background-color: #fff;
+    position: relative;
+}
+
+.first-header-nav{
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+}
+
+.first-header-nav > li{
+    padding-right : 15px;
+    padding-left: 15px;
+    list-style: none;   
+    height: 32px;
+    line-height: 32px;
+}
+
+.first-header-nav > li > a{
+    text-decoration: none;
+    color: #000;
+}
+
+.second-row-head{
+    display: flex;
+}
+
+.second-header-nav{
+    display: flex;
+}
+
+.second-header-nav > li{
+    list-style: none;
+    padding: 0 15px 0 15px; 
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.second-header-nav > li > a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+.search-container{
+    position: relative;
+    display: flex;
+    width: 250px;
+    height: 35px;
+    justify-items: center;
+    background-color: #fff;
+}
+
+.search-container > input{
+    width: 250px;
+}
+
+.search-container > i{
+    position: absolute;
+    right:0;
+    line-height: 35px;
+    font-size: 23px;
+    font-weight:bold;
+    padding-right: 8px;
+    padding-left: 8px;
+    gap: 15px;
+}
+
+.content-overlay{
+    bottom:10%;
+    left: 5%;
+    z-index: 1;
+    display: flex;
+    flex-direction:column ;
+    align-items: flex-start;
+}
+.text-box{
+    padding: 15px 20px; /* Adjust padding to control the size of the white background around text */
+    width: fit-content; /* Make the background fit the content */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.buy-btn-container{
+    font-size: 1.2em; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin from p */
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.buy-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between "Mua ngay" text and the arrow icon */
+    text-decoration: none; /* Remove underline from the link */
+    color: #fff; /* Set button text color to black */
+    font-weight: bold;
+    font-size: 1.1em; /* Adjust button text font size */
+    border: none;
+    background: none; /* Ensure no default background for the anchor tag */
+    cursor: pointer;
+    padding: 10; /* Remove default padding from anchor tag */
+    box-shadow: 5px 5px 10px gray;
+}
+
+.buy-button i {
+    font-size: 1.2em; /* Adjust icon size to match button text */
+    vertical-align: middle;
+}
+
+.option-product{
+    display: flex;
+    flex-direction: row;
+}
+
+.option-product > .first{
+    width: 80%;
+}
+
+.option-product > .last{
+    width: 20%;
+    text-align: right;
+}
+
+.product-list{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 0 20px 0 ;
+    overflow-x: auto;
+    right: 0;
+}
+
+.product{
+    box-sizing: border-box;
+}
+
+.product > img{
+    width: 370px;
+    height: 370px;
+    max-height: 600px;
+    max-width: 600px;
+}
+
+.annotation > p {
+    margin: 0;
+    padding-top: 5px;
+}
+
+.price-item{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.annotation-item{
+    font-size: 18px;
+    letter-spacing: 0.8px;
+}
+
+.performance {
+    opacity: 0.5;
+    font-size:16px
+}
