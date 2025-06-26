@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin-top: 0;
     margin-bottom: 0;
@@ -5,6 +9,7 @@ body{
     margin-left: 0;
     font-family:'Times New Roman', Times, serif;
 }
+
 .head-notify{
     width: 100%;
     block-size: 50px;
@@ -140,16 +145,20 @@ body{
     vertical-align: middle;
 }
 
-.option-product{
+#product-demo {
+    height: 670px;
+}
+
+#option-product{
     display: flex;
     flex-direction: row;
 }
 
-.option-product > .first{
+#option-product > .first{
     width: 80%;
 }
 
-.option-product > .last{
+#option-product > .last{
     width: 20%;
     text-align: right;
 }
@@ -163,35 +172,171 @@ body{
     padding: 20px 0 20px 0 ;
     overflow-x: auto;
     right: 0;
+    padding-bottom: 20px;
 }
 
 .product{
     box-sizing: border-box;
+    padding-bottom: 40px;
 }
 
-.product > img{
+.product > a > img{
     width: 370px;
     height: 370px;
     max-height: 600px;
     max-width: 600px;
 }
 
+.product > a {
+    text-decoration: none;
+    color: #000;
+
+}
+
+.product:hover {
+    border: 1px solid;
+}
+
 .annotation > p {
     margin: 0;
     padding-top: 5px;
+    padding-left: 5px;
+
 }
 
 .price-item{
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .annotation-item{
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 0.8px;
 }
 
 .performance {
-    opacity: 0.5;
-    font-size:16px
+    color: gray;
+    font-size:18px
+}
+
+
+/* New */
+#news {
+    width: 100%;
+    height: 790px;
+}
+
+.what-hot {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center; 
+    margin-top: 40px;
+}
+
+.what-hot > h2 {
+    font-size: 40px;
+    margin-top:0;
+}
+
+h2{
+    font-size: 40px;
+}
+
+.news-list {
+    gap: 20px;
+    scroll-behavior: smooth;
+    overflow-x:auto;
+}
+
+.new{
+    margin-top: 10px;
+    top :0;
+    box-sizing: border-box;
+    text-align: start;
+    padding:5px;
+}
+
+.new:hover {
+    border: 1px solid;
+}
+
+.new > a > img{
+    width: 370px;
+    height: 470px;
+}
+
+.new > a {
+    text-decoration: none;
+    color: #000;
+}
+
+.introduce {
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.annotation-new {
+    padding: 10px;
+    flex-grow: 1;
+    font-size: 21px;
+    text-align: left;
+}
+
+.extend-new {
+    padding-bottom: 5px;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    width: fit-content;
+}
+
+.register{
+    flex-direction: row;display: flex;
+    justify-content: center;
+    background-color: #007bc6;
+    height: 150px;
+}
+
+.btn-register{
+    padding:10px;
+    height: 60px;
+    margin-top: auto;margin-bottom: auto;
+    background-color: #fff;
+    color: #000;
+    border: #fff;
+    display: flex;
+    align-items: center;
+    font-weight: 550;
+    margin-left: 50px;
+    box-shadow: 10px 10px 5px grey;
+    text-decoration: none;
+
+}
+
+.exper-list{
+    margin-top: 30px;
+    display: flex;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 0 20px 0 ;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-section {
+    text-align: center;
+    justify-content: center;
+}
+
+.footer-section > a {
+    color: #fff;
+    text-decoration: none;  
+}
+
+.footer-section > a > i {
+    font-size: 30px;
+    padding:10px;
 }
