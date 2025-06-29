@@ -1,33 +1,44 @@
 [
   {
-    "name": "Ao thun",
+    "name": "Áo thun adizero running",
+    "description": "Áo thun thể thao adizero running với chất liệu thoáng mát, phù hợp cho các hoạt động thể thao.",
     "price": 99.99,
-    "image_url": "images/superstar.jpg"
+    "image_url": "SQLWen_files/adizero-running-tee.jpg",
+    "category_id": 1
   },
   {
-    "name": "Quần ngắn",
+    "name": "Quần ngắn 90s football",
+    "description": "Quần ngắn thể thao phong cách 90s, thiết kế thoải mái cho các hoạt động bóng đá.",
     "price": 129.99,
-    "image_url": "images/ultraboost.jpg"
+    "image_url": "SQLWen_files/90s-football-short.jpg",
+    "category_id": 2
   },
   {
-    "name": "Áo khoác",
+    "name": "Áo khoác multi essentials",
+    "description": "Áo khoác chống nước multi essentials 2L, bảo vệ tốt trong điều kiện thời tiết khắc nghiệt.",
     "price": 109.99,
-    "image_url": "images/airmax.jpg"
+    "image_url": "SQLWen_files/multi-essentials-2l-rain-jacket.jpg",
+    "category_id": 1
   },
   {
-    "name": "Giày thể thao nam",
+    "name": "Giày thể thao nam Gazelle",
+    "description": "Giày thể thao nam Gazelle với thiết kế cổ điển, phù hợp cho nhiều hoạt động thể thao.",
     "price": 119.99,
-    "image_url": "images/pumarsx.jpg"
+    "image_url": "SQLWen_files/BB_5478_SL_e_Com_Gazelle_Final_1_b4004777e0.jpeg",
+    "category_id": 3
   },
   {
-    "name": "Giày thể thao nữ",
+    "name": "Giày thể thao nữ Samba",
+    "description": "Giày thể thao nữ Samba với thiết kế thanh lịch, kết hợp hoàn hảo giữa thời trang và thể thao.",
     "price": 139.99,
-    "image_url": "images/nikeairforce.jpg"
+    "image_url": "SQLWen_files/IF_3814_SL_e_Com_Samba_Final_1_3ea3064d53.jpeg",
+    "category_id": 3
   },
   {
-    "name": "Áo thể thao",
+    "name": "Áo thể thao badge graphic",
+    "description": "Áo thể thao với họa tiết badge graphic độc đáo, phong cách thể thao hiện đại.",
     "price": 89.99,
-    "image_url": "images/reebokclassic.jpg"
+    "image_url": "SQLWen_files/badge-graphic-tee.jpg",
+    "category_id": 1
   }
-
 ]   
