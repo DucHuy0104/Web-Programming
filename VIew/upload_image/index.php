@@ -15,7 +15,7 @@ while ($row = $shoes->fetch_assoc()) $products[] = $row;
 while ($row = $clothing->fetch_assoc()) $products[] = $row;
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../login.html"); // hoặc login.php
+    header("Location: ../login.php"); // hoặc login.php
     exit;
 }
 ?>
@@ -142,7 +142,8 @@ if (!isset($_SESSION['user_id'])) {
     <div><img src="icon.png" alt="Logo" height="40"></div>
     <div>
         <span onclick="toggleMenu()">MEN</span>
-        <a href="../cart/carts.php">🛒</a> 👤
+        <a href="../cart/carts.php">🛒</a> 
+        <a href="../profile.php">👤</a>
     </div>
 </div>
 
