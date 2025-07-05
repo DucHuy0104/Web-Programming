@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS users;
 USE users;
 
 -- Tạo bảng người dùng (đổi tên từ 'user' thành 'users' để tránh lỗi từ khóa)
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE IF NOT EXISTS user (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
