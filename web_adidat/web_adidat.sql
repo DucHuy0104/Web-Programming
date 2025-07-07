@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3307
--- Thời gian đã tạo: Th7 06, 2025 lúc 05:33 PM
+-- Thời gian đã tạo: Th7 07, 2025 lúc 05:49 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.0.30
 
@@ -71,23 +71,16 @@ CREATE TABLE `orders` (
   `address` varchar(255) NOT NULL,
   `note` varchar(255) DEFAULT NULL,
   `status` enum('Chưa xác nhận','Chờ xử lý','Hoàn thành') NOT NULL,
-  `total` decimal(10,2) NOT NULL
+  `total` decimal(10,2) NOT NULL,
+  `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `orders`
 --
 
-INSERT INTO `orders` (`order_id`, `order_date`, `customer_name`, `phone_number`, `email`, `city`, `district`, `address`, `note`, `status`, `total`) VALUES
-(54, '2025-07-05 16:52:16', 'dat', '0998877666', 'dat@gmail.com', 'hcm', '12', '12', '', 'Chờ xử lý', 3000000.00),
-(55, '2025-07-05 16:52:47', 'dat', '0998877666', 'dat@gmail.com', 'hcm', '12', '12', '', 'Hoàn thành', 6000000.00),
-(56, '2025-07-05 20:29:08', 'dat', '0998877666', 'dat@gmail.com', 'hcm', '12', '12', '1236', 'Hoàn thành', 3000000.00),
-(57, '2025-07-06 09:13:26', 'dat', '0998877666', 'dat@gmail.com', 'hcm', '12', '12', '', 'Chưa xác nhận', 1800000.00),
-(58, '2025-07-06 09:40:09', 'dat', '0399999999', 'dat@gmail.com', 'hcm', '12', '12', '', 'Hoàn thành', 6000000.00),
-(59, '2025-07-06 10:13:05', 'dat', '0399999999', 'dat@gmail.com', 'hcm', '12', '12', '', 'Hoàn thành', 3600000.00),
-(60, '2025-07-06 11:07:27', 'dat', '0399999999', 'dat@gmail.com', 'hcm', '12', '12', '', 'Chưa xác nhận', 1800000.00),
-(61, '2025-07-06 15:22:39', 'dat', '0399999999', 'dat@gmail.com', 'hcm', '12', '12', '', 'Chưa xác nhận', 3000000.00),
-(62, '2025-07-06 15:23:34', 'dat', '0399999999', 'dat@gmail.com', 'hcm', '12', '12', '', 'Chưa xác nhận', 1000000.00);
+INSERT INTO `orders` (`order_id`, `order_date`, `customer_name`, `phone_number`, `email`, `city`, `district`, `address`, `note`, `status`, `total`, `user_id`) VALUES
+(68, '2025-07-07 13:48:03', 'dat', '0399999999', 'dat@gmail.com', 'hcm', '12', '12', '', 'Chưa xác nhận', 3000000.00, 1);
 
 -- --------------------------------------------------------
 
@@ -110,17 +103,7 @@ CREATE TABLE `order_details` (
 --
 
 INSERT INTO `order_details` (`order_detail_id`, `order_id`, `product_id`, `size_value`, `quantity`, `unit_price`, `product_size_id`) VALUES
-(15, 54, 29, '0', 1, 3000000, NULL),
-(16, 55, 29, '0', 2, 3000000, NULL),
-(17, 56, 29, '0', 1, 3000000, NULL),
-(18, 57, 25, '0', 1, 1800000, NULL),
-(19, 58, 29, '0', 1, 3000000, NULL),
-(20, 58, 29, '0', 1, 3000000, NULL),
-(21, 59, 28, '0', 1, 1800000, NULL),
-(22, 59, 28, '0', 1, 1800000, NULL),
-(23, 60, 28, '0', 1, 1800000, NULL),
-(24, 61, 29, 'XL', 1, 3000000, NULL),
-(25, 62, 21, '42', 1, 1000000, NULL);
+(31, 68, 29, 'XL', 1, 3000000, NULL);
 
 -- --------------------------------------------------------
 
@@ -317,7 +300,7 @@ CREATE TABLE `user_carts` (
 --
 
 INSERT INTO `user_carts` (`id`, `user_id`, `product_id`, `size`, `quantity`, `created_at`, `updated_at`) VALUES
-(116, 1, 26, 'S', 1, '2025-07-06 15:32:25', '2025-07-06 15:32:25');
+(137, 1, 29, 'XL', 1, '2025-07-07 15:45:53', '2025-07-07 15:45:53');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -399,25 +382,25 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT cho bảng `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `order_detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `order_detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT cho bảng `product_size`
 --
 ALTER TABLE `product_size`
-  MODIFY `product_size_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=172;
+  MODIFY `product_size_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=173;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
@@ -429,7 +412,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `user_carts`
 --
 ALTER TABLE `user_carts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

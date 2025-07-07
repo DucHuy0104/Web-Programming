@@ -2,8 +2,15 @@
 session_start();
 include '../includes/db.php';
 
+if (!isset($_SESSION['user_id']) || $_SESSION['user_id'] == 0) {
+    // Xử lý trường hợp người dùng chưa đăng nhập
+    echo "Bạn cần đăng nhập để đặt hàng.";
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Lấy thông tin khách hàng
+    $user_id = $_SESSION['user_id'];
     $customer_name = $_POST['customer_name'];
     $phone_number = $_POST['phone'];
     $email = $_POST['email'];
@@ -33,8 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Giỏ hàng trống hoặc có sản phẩm không hợp lệ.";
     } else {
         // Lưu đơn hàng vào CSDL
-        $stmt = $pdo->prepare("INSERT INTO orders (customer_name, phone_number, email, city, district, address, note, status, total) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->execute([$customer_name, $phone_number, $email, $city, $district, $address, $note, $status, $total]);
+        $stmt = $pdo->prepare("INSERT INTO orders (customer_name, phone_number, email, city, district, address, note, status, total, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->execute([$customer_name, $phone_number, $email, $city, $district, $address, $note, $status, $total, $user_id]);
         $order_id = $pdo->lastInsertId();
 
         // Lưu chi tiết đơn hàng
